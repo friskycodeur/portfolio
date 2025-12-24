@@ -99,7 +99,7 @@ type DetailsModalProps = {
 
 function DetailsModal({ item, onClose }: DetailsModalProps) {
   useEffect(() => {
-    const handler = (e) => {
+    const handler = (e: KeyboardEvent) => {
       if (e.key === "Escape") onClose();
     };
     window.addEventListener("keydown", handler);
@@ -152,7 +152,7 @@ function DetailsModal({ item, onClose }: DetailsModalProps) {
 }
 
 export default function Portfolio() {
-  const [activeItem, setActiveItem] = useState(null);
+  const [activeItem, setActiveItem] = useState<DetailsItem | null>(null);
 
   return (
     <div className="min-h-screen bg-slate-950 text-slate-100 px-6 py-12">
