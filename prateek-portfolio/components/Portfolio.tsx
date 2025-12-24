@@ -84,7 +84,20 @@ const experiences = [
 ];
 
 // -------------------- Modal --------------------
-function DetailsModal({ item, onClose }) {
+type DetailsItem = {
+  title: string;
+  subtitle?: string;
+  icon?: string;
+  metrics?: string;
+  details: string[];
+};
+
+type DetailsModalProps = {
+  item: DetailsItem | null;
+  onClose: () => void;
+};
+
+function DetailsModal({ item, onClose }: DetailsModalProps) {
   useEffect(() => {
     const handler = (e) => {
       if (e.key === "Escape") onClose();
