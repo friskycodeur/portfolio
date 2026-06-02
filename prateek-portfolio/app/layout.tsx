@@ -2,9 +2,9 @@ import "./globals.css";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Prateek Maheshwari | Senior Backend Engineer",
+  title: "Prateek Maheshwari | Backend Engineer",
   description:
-    "Senior Backend Engineer specializing in Java, Spring Boot, distributed systems, and performance optimization.",
+    "Backend Engineer specializing in Java, Spring Boot, AWS, distributed workflows, and performance optimization.",
 };
 
 export default function RootLayout({
